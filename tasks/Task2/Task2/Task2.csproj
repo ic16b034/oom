@@ -43,9 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Berechnungen.cs" />
     <Compile Include="Main_program.cs" />
-    <Compile Include="Studenten.cs" />
+    <Compile Include="Geometrie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rechteck.cs" />
+    <Compile Include="Würfel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

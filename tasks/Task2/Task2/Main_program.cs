@@ -8,22 +8,26 @@ namespace Task2
     {
         public static void Main(string[] args)
 		{
-            var studenten = new[]
+            var koerper = new[]
         { 
-            new Studenten("Friedrich", "Nemec", "27.11.1981", "XXX"),
-            new Studenten("Anoton", "Huber", "01.10.192", "YYY"),
-            new Studenten("Robert", "Franzen", "20.01.1971", "ZZZ"),
-            new Studenten("Anna", "Berger", "07.03.1990", "VVV"),
-            new Studenten("Leo", "Hauer", "06.04.1995", "WWW")
-        }; 
- 
- 
- 			foreach (var student in studenten) 
- 			{ 
- 				Console.WriteLine(  "Name: "+student.Vorname +" "+ student.Nachname +"\n" + 
-                                    "Geburtsdatum: "+ student.Geburtsdatum +"\n" + 
-                                    "Lieblingsfach: "+student.Lieblingsfach+"\n" + 
-                                    "Matrikelnummer: "+ student.Matrikelnummer+"\n" ); 
+            new Geometrie("Quadrat", "2D", 10, 20, 0, 0),
+            new Geometrie("Pyramide", "3D", 5, 5, 10, 0),
+            new Geometrie("Kreis", "2D", 0, 0, 0, 1),
+
+        };
+
+            Berechnungen rechteck = new Rechteck(1, 1, 1);
+            Berechnungen wuerfel = new Würfel(1, 1, 1);
+
+
+            foreach (var kor in koerper) 
+ 			{
+                Console.WriteLine("Form: " + kor.Form + "\n" +
+                                   "Dimesion: " + kor.Dimension + "\n" +
+                                   "Länge: " + kor.Laenge + "\n" +
+                                   "Breite: " + kor.Breite + "\n" +
+                                   "Höhe: " + kor.Hoehe + "\n" +
+                                   "Radius: " + kor.Radius + "\n");
  			} 
  
 		} 
