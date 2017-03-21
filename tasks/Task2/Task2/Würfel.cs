@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task2
 {
-    class Würfel : Berechnungen 
+    class Würfel : form 
     {
 
         public float seitenlaengeWuerfel { get; }
@@ -14,22 +14,6 @@ namespace Task2
         public Würfel(float seitenlaenge)
         {
             seitenlaengeWuerfel = seitenlaenge;
-        }
-
-
-        public float grundfläche(float a, float b)
-        {
-            return a * b;
-        }
-
-        public float mantelfläche(float a, float b, float c)
-        {
-            return (a * a) * 6;
-        }
-
-        public float volumen(float a, float b, float c)
-        {
-            return a * a * a;
         }
 
         public void werbinich()
