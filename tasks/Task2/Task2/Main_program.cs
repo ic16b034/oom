@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 
 
@@ -16,30 +18,28 @@ namespace Task2
              new Würfel(4)
 
          };
-
-            var rechtecke = new[]
+            
+            var koerper = new[]
             {
-                new Rechteck(2,1,1),
-                new Rechteck(1,2,1),
-                new Rechteck(1,1,2),
-                new Rechteck(3,1,1)
+                new Rechteck("Test_1",2,1,1),
+                new Rechteck("Test_2",2,1,1),
+                new Rechteck("Test_3",1,1,2),
+                new Rechteck("Test_4",3,1,1)
 
-             };
+            };
+       
+            string s = JsonConvert.SerializeObject(koerper);
+            Console.WriteLine(s);
 
-
-            foreach (var wuer in wuerfel) 
+            Rechteck[] rechtecke = JsonConvert.DeserializeObject<Rechteck[]>(s);
+           
+            foreach (var x in rechtecke) 
  			{
-                wuer.werbinich();
-                Console.WriteLine("Sseitenlänge: " + wuer.seitenlaengeWuerfel + "\n");
+                Console.WriteLine("Name: " + x.nameRechteck + "Länge: " + x.laengeRechteck + "Breite: " + x.breiteRechteck + "Höhe: " + x.hoeheRechteck);
  			}
 
-            foreach (var rechteck in rechtecke)
-            {
-                rechteck.werbinich();
-                Console.WriteLine("Länge: " + rechteck.laengeRechteck + "\n");
-            }
-        } 
+        }
 
-       
+
     }
 }

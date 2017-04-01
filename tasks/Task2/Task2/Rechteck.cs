@@ -6,18 +6,20 @@ using System.Threading.Tasks;
 
 namespace Task2
 {
-    class Rechteck : form
+    class Rechteck : Form
     {
 
         public float laengeRechteck { get; }
         public float breiteRechteck { get; }
         public float hoeheRechteck { get; }
+        public string nameRechteck { get; }
 
-        public Rechteck(float laenge, float breite, float hoehe)
+        public Rechteck(string name,float laenge, float breite, float hoehe)
         {
             laengeRechteck = laenge;
             breiteRechteck = breite;
             hoeheRechteck = hoehe;
+            nameRechteck = name;
          }
 
 

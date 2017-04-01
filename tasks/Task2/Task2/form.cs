@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task2
 {
-    interface form
+    interface Form
     {
 
         void werbinich();

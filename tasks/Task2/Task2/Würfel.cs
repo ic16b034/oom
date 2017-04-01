@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task2
 {
-    class Würfel : form 
+    class Würfel : Form 
     {
 
         public float seitenlaengeWuerfel { get; }
