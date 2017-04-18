@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task2
 {
-    class Rechteck : Form
+    class Rechteck : Form 
     {
 
         public float laengeRechteck { get; }
